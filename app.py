@@ -12,11 +12,11 @@ with open(filename, encoding='utf-8-sig') as f:
 
 for dicti in data:
     name = dicti['Name']
-    sex = dicti['Sex']
-    if name in names and sex == 'Ж':
-        female_names.append(name)
-    elif name in names and sex == 'М':
-        male_names.append(name)
+    if name in names:
+        if dicti['Sex'] == 'Ж':
+            female_names.append(name)
+        else:
+            male_names.append(name)
 
 print(male_names)
 print(female_names)
