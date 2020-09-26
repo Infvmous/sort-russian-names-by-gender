@@ -6,9 +6,7 @@ def json_to_dict(filename):
         return json.load(f)
 
 
-def sort(names, all_names):
-    male_names = []
-    female_names = []
+def sort(names, all_names, male_names = [], female_names = []):
     for dicti in all_names:
         name = dicti['Name']
         if name in names:
